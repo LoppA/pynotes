@@ -1,3 +1,4 @@
+# DONE
 # Create a function that returns a dictionary of the items of a list
 # and their counts.
 
@@ -8,4 +9,11 @@ def count_items(lst):
     >>> {'one': 1, 'three': 3, 'two': 2}
     """
 
-    # your code here
+    dct = {}
+
+    for item in lst:
+        if item not in dct:
+            dct[item] = 0
+        dct[item] += 1
+
+    return dct
